@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="custom-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Chiudi">&times;</button>
+        <h2>let's get started...</h2>
+        <p>Compila il modulo per contattarci.</p>
+    
+        <form action="">
+            <div class="form-group-info">
+                <div class="input-box-row">
+                    <div class="input-box">
+                        <label for="name">Come ti chiami?</label>
+                        <input type="text" id="name" name="name" placeholder="Nome e Cognome qui" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="name">Come si chiama la tua attività?</label>
+                        <input type="text" id="name" name="name" placeholder="Pizzeria del sole S.r.l" required>
+                    </div>
+                </div>
+                <div class="input-box-row">
+                    <div class="input-box">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="Indirizzo email" required>    
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Preferisci essere chiamato?</label>
+                        <input type="text" id="email" name="email" placeholder="Numero di telefono">    
+                    </div> 
+                </div>
+                <div class="input-box-row">
+                    <div class="input-box">
+                        <label for="budget">Quale è il tuo budget?</label>
+                        <input type="text" id="email" name="email" placeholder="Budget..." required>    
+                    </div>
+                    <div class="input-box">
+                        <label for="timeline">Entro quando ti servirebbe il sito?</label>
+                        <input type="text" id="email" name="email" placeholder="Entro quando...">    
+                    </div> 
+                </div>
+                <div class="input-box-row centpercent">
+                    <div class="input-box">
+                        <label for="budget">Dicci del tuo progetto</label>
+                        <input class="tellus" type="text" id="email" name="email" placeholder="Facci sapere di cosa hai bisogno..." required>    
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Invia</button>
+            </div>
+      </div>
+    </div>
+
+
+
+
+    <header>
+
+        <div class="header__container">
+            <div class="header-promo">
+                <div class="promo-content">
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                </div>
+            </div>
+            <div class="header-menu">
+
+                <a href="index.html">
+                    <img src="../assets/logo.png" alt="">
+                </a>
+
+                <nav>
+                    <ul>
+                        <li class="select"><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Chi Siamo</a></li>
+                        <li><a href="index.html">Portfolio</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-buttons">
+                    <a href="index.html" class="header-button header-button--primary">Prenota</a>
+                    <a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="header-button header-button--secondary">Contattaci</a>
+                </div>
+            </div>
+            
+        </div>
+
+    </header>
+    <main>
+
+        <div class="hero">
+            <h1 id="hero-title">Creiamo siti web che fanno la differenza.</h1>
+            <video id="hero-video" class="hero-video" src="../assets/homevideoheader.mp4" autoplay muted loop playsinline></video>
+        </div>
+
+        <section class="scroll-section">
+            <h2 class="reveal">Costruiamo esperienze digitali su misura che parlano ai tuoi clienti, generano valore e fanno crescere il tuo brand.</h2>
+            <a href="../pages/portfolio.html" class="button-classic">Scopri i nostri lavori <i class="fas fa-arrow-right"></i></a>
+
+        </section>
+
+        <section >
+            <div class="divisore">
+                <h3>lavori recenti</h3>
+                <a href="portfolio.html" class="button-classic">vedi tutti</a>
+            </div>
+            <div class="video-container">
+                <video  src="../assets/home-video1.mp4" autoplay muted loop playsinline></video>
+                <video  src="../assets/home-video2.mp4" autoplay muted loop playsinline></video>
+            </div>
+            
+        </section>
+
+        <section id="servizi">
+            <div class="divisore">
+                <h3>servizi</h3>
+            </div>
+            <div class="col-100">
+                <div class="wrapper_text">
+                    <h3>Strategia. Design. Sviluppo.</h3>
+                    <ul>
+                        <li>
+                            Web Design & UI/UX
+                            <ul>
+                                <li>Design che guida l’utente dove vuoi tu.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Sviluppo Web
+                            <ul>
+                                <li>Siti ultra-performanti, responsive e facili da gestire.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Brand Identity
+                            <ul>
+                                <li>Dal logo al tono di voce: ti aiutiamo a farti riconoscere.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Landing Page & Funnel
+                            <ul>
+                                <li>Siti per chi cerca conversioni.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrapper_video">
+                    <video  class="hero-video" src="../assets/home-video3.mp4" autoplay muted loop playsinline></video>
+                </div>
+            </div>
+
+        </section>
+
+        
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
+
+        <div class="footer__container">
+            <div class="footer-text">
+                <h2>Creiamo qualcosa</h2>
+                <h2>di <span class="switch-word visible">unico</span></h2>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a><i class="fas fa-globe"></i> We Work With Passion</a></li>
+                    <li><a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="a-hover">Contattaci <i class="fas fa-arrow-right"></i></a></li>
+                    <li><a href="index.html" class="a-hover">Prenota una consulenza gratuita</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <div class="logo-grigio">
+                        <img src="../assets/logo-grigio.png" alt="">
+                    </div>
+                    <span>
+                        <p class="footer-privacy">© 2025 <a href="privacy.html">privacy</a></p>
+                    </span>
+
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <script src="../promo.js"></script>
+    <script src="../switch-parola-ani.js"></script>
+    <script src="../footer-objects.js"></script>
+    <script src="../modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../hero-anim.js"></script>
+    <script src="../modal-anim.js"></script>
+    <script src="../h1-anim.js"></script>
+    <script src="../gen-anim.js"></script>
+    <script src="../body-bg-anim.js"></script>
+</body>
+</html>

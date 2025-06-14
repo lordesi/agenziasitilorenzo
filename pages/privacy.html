@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="custom-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Chiudi">&times;</button>
+        <h2>let's get started...</h2>
+        <p>Compila il modulo per contattarci.</p>
+    
+        <form action="">
+            <div class="form-group-info">
+                <div class="input-box-row">
+                    <div class="input-box">
+                        <label for="name">Come ti chiami?</label>
+                        <input type="text" id="name" name="name" placeholder="Nome e Cognome qui" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="name">Come si chiama la tua attività?</label>
+                        <input type="text" id="name" name="name" placeholder="Pizzeria del sole S.r.l" required>
+                    </div>
+                </div>
+                <div class="input-box-row">
+                    <div class="input-box">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="Indirizzo email" required>    
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Preferisci essere chiamato?</label>
+                        <input type="text" id="email" name="email" placeholder="Numero di telefono">    
+                    </div> 
+                </div>
+                <div class="input-box-row">
+                    <div class="input-box">
+                        <label for="budget">Quale è il tuo budget?</label>
+                        <input type="text" id="email" name="email" placeholder="Budget..." required>    
+                    </div>
+                    <div class="input-box">
+                        <label for="timeline">Entro quando ti servirebbe il sito?</label>
+                        <input type="text" id="email" name="email" placeholder="Entro quando...">    
+                    </div> 
+                </div>
+                <div class="input-box-row centpercent">
+                    <div class="input-box">
+                        <label for="budget">Dicci del tuo progetto</label>
+                        <input class="tellus" type="text" id="email" name="email" placeholder="Facci sapere di cosa hai bisogno..." required>    
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Invia</button>
+            </div>
+      </div>
+    </div>
+
+
+
+
+    <header>
+
+        <div class="header__container">
+            <div class="header-promo">
+                <div class="promo-content">
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                </div>
+            </div>
+            <div class="header-menu">
+
+                <a href="index.html">
+                    <img src="../assets/logo.png" alt="">
+                </a>
+
+                <nav>
+                    <ul>
+                        <li class="select"><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Chi Siamo</a></li>
+                        <li><a href="index.html">Portfolio</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-buttons">
+                    <a href="index.html" class="header-button header-button--primary">Prenota</a>
+                    <a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="header-button header-button--secondary">Contattaci</a>
+                </div>
+            </div>
+            
+        </div>
+
+    </header>
+    <main>
+        <section class="privacy-container">
+            <h2 class="font-switch"><span class="privacy-font">Privacy</span> Policy</h2>
+            <div class="divisore">
+                <h3>salta:</h3>
+                <a href="#introduction" class="button-classic">Introduzione</a>
+                <a href="#collecteddata" class="button-classic">Dati Raccolti</a>
+                <a href="#user-rights" class="button-classic">Diritti dell'utente</a>
+            </div>
+
+            <div class="privacy-section" id="introduction">
+                <h4>Ultimo aggiornamento: <span class="privacy-date">14/06/2025</span></h4>
+                <p>
+                    La presente Privacy Policy descrive le modalità con cui <strong>[Nome dell’Agenzia]</strong> raccoglie, utilizza, conserva e protegge i dati personali degli utenti che visitano e utilizzano il sito web <strong>[www.tuosito.it]</strong>.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h4>1. Titolare del Trattamento</h4>
+                <ul>
+                    <li>Nome azienda: <strong>[Nome dell’Agenzia]</strong></li>
+                    <li>Indirizzo: <strong>[Via, CAP, Città, Provincia]</strong></li>
+                    <li>Email di contatto: <strong>[email aziendale]</strong></li>
+                    <li>P.IVA: <strong>[numero]</strong></li>
+                </ul>
+            </div>
+
+            <div class="privacy-section" id="collecteddata">
+                <h4>2. Tipi di dati raccolti</h4>
+                <ul>
+                    <li>Dati di contatto: nome, cognome, email, numero di telefono, azienda</li>
+                    <li>Dati di navigazione: indirizzo IP, tipo di browser, informazioni sul dispositivo, pagine visitate, orari di accesso</li>
+                    <li>Dati forniti volontariamente: informazioni inviate tramite form di contatto o richieste specifiche</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h4>3. Finalità del trattamento</h4>
+                <ul>
+                    <li>Rispondere a richieste di informazioni o preventivi</li>
+                    <li>Fornire i servizi richiesti</li>
+                    <li>Adempiere a obblighi di legge</li>
+                    <li>Migliorare l’esperienza utente e la qualità del sito</li>
+                    <li>Inviare comunicazioni commerciali (previo consenso)</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h4>4. Base giuridica del trattamento</h4>
+                <ul>
+                    <li>Il consenso dell’utente</li>
+                    <li>L’esecuzione di un contratto o misure precontrattuali</li>
+                    <li>Obblighi legali</li>
+                    <li>Legittimo interesse del Titolare</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h4>5. Modalità del trattamento</h4>
+                <p>
+                    I dati sono trattati mediante strumenti elettronici e/o cartacei con misure di sicurezza adeguate a garantire la riservatezza e l’integrità.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h4>6. Conservazione dei dati</h4>
+                <p>
+                    I dati personali saranno conservati per il tempo necessario a conseguire gli scopi per cui sono stati raccolti e comunque non oltre i limiti previsti dalla legge.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h4>7. Comunicazione a terzi</h4>
+                <ul>
+                    <li>Collaboratori e fornitori strettamente necessari per l’erogazione dei servizi</li>
+                    <li>Professionisti (es. consulenti fiscali, legali)</li>
+                    <li>Autorità pubbliche se richiesto per legge</li>
+                    <li>Non cediamo i dati a terzi per finalità di marketing senza consenso esplicito.</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section" id="user-rights">
+                <h4>8. Diritti dell’utente</h4>
+                <ul>
+                    <li>Accedere ai tuoi dati</li>
+                    <li>Chiedere la rettifica o la cancellazione</li>
+                    <li>Opporsi al trattamento o chiederne la limitazione</li>
+                    <li>Richiedere la portabilità dei dati</li>
+                    <li>Revocare il consenso in qualsiasi momento</li>
+                </ul>
+                <p>
+                    Per esercitare i tuoi diritti puoi scrivere a: <strong>[email aziendale]</strong>
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h4>9. Cookie</h4>
+                <p>
+                    Il sito utilizza cookie tecnici e, previo consenso, anche cookie di terze parti per analisi e marketing. Per maggiori informazioni consulta la nostra Cookie Policy.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h4>10. Modifiche alla Privacy Policy</h4>
+                <p>
+                    Ci riserviamo il diritto di modificare questa Privacy Policy in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con data di aggiornamento.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+        <div class="footer__container">
+            <div class="footer-text">
+                <h2>Creiamo qualcosa</h2>
+                <h2>di <span class="switch-word visible">unico</span></h2>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a><i class="fas fa-globe"></i> We Work With Passion</a></li>
+                    <li><a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="a-hover">Contattaci <i class="fas fa-arrow-right"></i></a></li>
+                    <li><a href="index.html" class="a-hover">Prenota una consulenza gratuita</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <div class="logo-grigio">
+                        <img src="../assets/logo-grigio.png" alt="">
+                    </div>
+                    <span>
+                        <p class="footer-privacy">© 2025 <a href="privacy.html">privacy</a></p>
+                    </span>
+
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <script src="../promo.js"></script>
+    <script src="../switch-parola-ani.js"></script>
+    <script src="../modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</body>
+</html>
