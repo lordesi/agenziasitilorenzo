@@ -1,0 +1,113 @@
+
+:root{
+    --theme-primary: #90f188;
+    --theme-secondary: #0f1d07;
+    --theme-background: #f3f3e9;
+    --theme-tertiary: #D7DF58;
+    --theme-quaternary: #27063B;
+    
+
+
+    --purple-text: #5b16bb;
+    --blue-text: #0093d9;
+    --white-text: #ffffff;
+    --light-purle-text: #b488f1;
+    --black-text: #000000;
+
+    --gray-hover: #f3f3f3;
+
+
+}
+
+body {
+    background-color: var(--theme-quaternary);
+}
+
+.hero h1 {
+    color: #DDD8E8;
+}
+
+.header-promo{
+    background-color: #DDD8E8;;
+}
+
+.header-menu ul li.select > a{
+    color: var(--blue-text);
+}
+
+
+.footer-text h2{
+    color: #DDD8E8;
+}
+
+
+.footer-nav ul li a{
+
+    color: #DDD8E8;
+    
+}
+
+.footer-nav{
+    border-bottom: 1px solid  #DDD8E8;
+}
+
+
+.footer-privacy{
+    color: #DDD8E8;
+}
+
+.footer-privacy a{
+    color:  #DDD8E8;
+}
+
+.grid-section{
+    margin-bottom: 5rem;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* La prima colonna occupa 3/4, la seconda 1/4 */
+    gap: 1rem; /* Spaziatura tra le colonne */
+    align-items: start; /* Allinea gli elementi all'inizio */
+    transition: grid-template-columns 0.4s ease-in-out; /* Transizione fluida */
+}
+
+.grid-container.hovered {
+    grid-template-columns: 1fr 3fr; /* Cambia layout quando hover su col-1-4 */
+    transition: grid-template-columns 0.4s ease-in-out; /* Transizione fluida */
+}
+
+
+.col-3-4, .col-1-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Spaziatura tra immagine e testo */
+}
+
+.col-3-4 img, .col-1-4 img , .col-3-4 video{
+    width: 100%; /* L'immagine occupa tutta la larghezza disponibile */
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: cover; /* Assicura che l'immagine riempia il contenitore */
+    border-radius: 2rem; /* Arrotonda gli angoli */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra */
+}
+
+.text-content h4 {
+    font-family: "Instrument-Serif",Times,serif;
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: var(--theme-background);
+}
+
+.text-content p {
+    margin-left: 2rem;
+    font-size: 1rem;
+    color: var(--theme-background);
+}
+
+.grid-container.inverso{
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Inverti l'ordine delle colonne */
+    gap: 1rem;
+}

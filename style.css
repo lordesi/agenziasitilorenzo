@@ -67,7 +67,7 @@ header{
     width: 100%;
     height: auto;
     left: 0;
-    padding: 0 40px;
+    
 
 }
 
@@ -115,6 +115,7 @@ header{
     align-items: center;
     width: 100%;
     height: 80px;
+    padding: 0 40px;
 }
 
 
@@ -203,20 +204,26 @@ main{
   position: relative;
   width: 100%;
   height: auto;
-  overflow: hidden;
+  overflow: visible;
   padding: 0 4rem; /* simula margin */
 }
 
 /* Titolo opzionale */
 .hero h1 {
-  font-family: "Instrument-Serif", Times, serif;
-  font-size: 6rem;
-  letter-spacing: -0.05rem;
-  transform: scaleY(1.4);
-  margin-bottom: 100px;
-  padding: 0 20px;
+    font-family: "Instrument-Serif", Times, serif;
+    font-size: 6rem;
+    letter-spacing: -0.05rem;
+    transform: scaleY(1.4);
+    margin-bottom: 100px;
+    padding: 0 20px;
+    transform-origin: center;
+    display: inline-block;
+    white-space: normal; /* Permette il ritorno a capo */
+    overflow-wrap: break-word; /* Spezza le parole lunghe solo se necessario */
+    word-wrap: break-word; /* Supporto per browser più vecchi */
+    hyphens: none; /* Evita la divisione delle parole */
+    width: 100%; /* Assicura che il titolo occupi tutta la larghezza disponibile */
 }
-
 /* Video */
 #hero-video {
   display: block;
@@ -375,11 +382,12 @@ section h2 {
     display: flex;
     flex-direction: row;
     align-items: start;
-    padding: 20px 150px;
+    padding: 20px 50px;
+    border: 1px solid red;
 }
 
 .wrapper_text{
-    width: 50%;
+    width: 100%;
 }
 
 .wrapper_text h3{
@@ -428,12 +436,14 @@ section h2 {
 
 
 .wrapper_video{
-    width: 50%;
+    width: 100%;
     height: auto;
+    border: 1px solid red;
 }
 
 .wrapper_video video{
     width: 100%;
+    height: auto;
     border-radius: 2rem;
 
 }
@@ -447,8 +457,6 @@ footer{
     width: 100%;
     max-height: 750px;
     padding: 96px 80px 0 80px;
-    background-color: var(--white-text);
-    
 
 }
 
@@ -791,7 +799,7 @@ body.modal-open {
 
     width: 100%;
     height: auto;
-    padding: 0 30rem;
+    padding: 0 10rem;
 
 }
 .privacy-font{
@@ -841,4 +849,77 @@ body.modal-open {
 .privacy-date {
     color: var(--blue-text);
     font-weight: 600;
+}
+
+/* Responsive per tablet */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 4rem; /* Riduci la dimensione del font */
+        padding: 0 10px; /* Riduci il padding */
+    }
+
+    .col-100{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .video-container{
+        grid-auto-flow: row;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Una colonna per dispositivi più piccoli */
+    }
+
+    .footer__container {
+        grid-template-rows: auto auto; /* Riduci il numero di righe */
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr; /* Una colonna per dispositivi più piccoli */
+    }
+}
+
+/* Responsive per dispositivi mobili */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 3rem; /* Riduci ulteriormente la dimensione del font */
+        padding: 0 5px; /* Riduci il padding */
+    }
+
+    .col-100{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .video-container{
+        grid-auto-flow: row;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Una colonna per dispositivi più piccoli */
+    }
+
+    .footer__container {
+        grid-template-rows: auto auto; /* Riduci il numero di righe */
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr; /* Una colonna per dispositivi più piccoli */
+    }
+
+    .promo-text {
+        font-size: 0.8rem; /* Riduci la dimensione del testo */
+    }
+
+    .button-classic {
+        font-size: 12px; /* Riduci la dimensione del font */
+        padding: 0.4rem 0.8rem; /* Riduci il padding */
+    }
 }

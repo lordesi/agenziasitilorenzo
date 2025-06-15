@@ -1,0 +1,83 @@
+
+:root{
+    --theme-primary: #90f188;
+    --theme-secondary: #0f1d07;
+    --theme-background: #f3f3e9;
+    --theme-tertiary: #D7DF58;
+    --theme-quaternary: #27063B;
+    
+
+
+    --purple-text: #5b16bb;
+    --blue-text: #0093d9;
+    --white-text: #ffffff;
+    --light-purle-text: #b488f1;
+    --black-text: #000000;
+
+    --gray-hover: #f3f3f3;
+
+
+}
+
+body {
+    background-color: #C6CEA0C0;
+}
+
+.hero h1 {
+    color: #233730;
+}
+
+.header-promo{
+    background-color: #C6CEA0;
+}
+
+.select{
+    background-color: var(--theme-secondary);
+}
+
+
+
+.header-menu ul li.select > a{
+    color: white;
+}
+
+.header-menu ul li:hover{
+    background-color: rgba(35, 55, 48, 0.3);
+}
+
+.header-buttons a{
+    background-color: #2337301E;
+    color: var(--theme-secondary);
+    
+}
+
+.header-menu ul{
+    
+    background-color: #2337301E;
+    
+    
+}
+
+.footer-text h2{
+    color: #233730;
+}
+
+
+.footer-nav ul li a{
+
+    color:#233730;
+    
+}
+
+.footer-nav{
+    border-bottom: 1px solid  #233730;
+}
+
+
+.footer-privacy{
+    color: #233730;
+}
+
+.footer-privacy a{
+    color:  #233730;
+}
