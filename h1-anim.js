@@ -1,34 +1,20 @@
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", () => {
+    // Assicurati che GSAP sia stato caricato
+    if (typeof gsap === "undefined") {
+        console.error("GSAP non è stato caricato.");
+        return;
+    }
 
-function splitTextToLetters(element) {
-    const text = element.textContent;
-    element.innerHTML = '';
-    text.split('').forEach(char => {
-        const span = document.createElement('span');
-        span.textContent = char === ' ' ? '\u00A0' : char;
-        span.style.display = 'inline-block';
-        span.style.opacity = 0;
-        span.style.transform = 'translateY(32px)';
-        element.appendChild(span);
-    });
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    const title = document.getElementById('hero-title');
-    if (!title) return;
-
-    splitTextToLetters(title);
-
-    gsap.to("#hero-title span", {
+    // Applica l'animazione a tutti gli elementi con la classe .hero-title
+    gsap.to(".hero-title", {
         opacity: 1,
         y: 0,
-        stagger: 0.045,
-        duration: 0.3,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: "#hero-title",
-            start: "top 80%",
-            once: true // parte solo la prima volta
-        }
+        duration: 1.2,
+        ease: "power3.out",
+        
+        // La proprietà 'stagger' crea l'animazione sequenziale
+        stagger: 0.2, // Applica un ritardo di 0.2 secondi tra l'inizio dell'animazione di ogni h1
+        
+        delay: 0.5
     });
 });
