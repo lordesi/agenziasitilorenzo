@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../portfolio-style.css">
-    <title>Document</title>
+    <title>Agenzia | Creiamo siti web che fanno la differenza</title>
 </head>
-
-
 <body>
+
     <div id="custom-modal" class="modal-overlay hidden">
       <div class="modal-content">
         <button class="modal-close" aria-label="Chiudi">&times;</button>
         <h2>let's get started...</h2>
         <p>Compila il modulo per contattarci.</p>
-    
         <form action="">
             <div class="form-group-info">
                 <div class="input-box-row">
@@ -26,46 +24,43 @@
                         <input type="text" id="name" name="name" placeholder="Nome e Cognome qui" required>
                     </div>
                     <div class="input-box">
-                        <label for="name">Come si chiama la tua attività?</label>
-                        <input type="text" id="name" name="name" placeholder="Pizzeria del sole S.r.l" required>
+                        <label for="activity-name">Come si chiama la tua attività?</label>
+                        <input type="text" id="activity-name" name="activity-name" placeholder="Pizzeria del sole S.r.l" required>
                     </div>
                 </div>
                 <div class="input-box-row">
                     <div class="input-box">
                         <label for="email">Email:</label>
-                        <input type="text" id="email" name="email" placeholder="Indirizzo email" required>    
+                        <input type="email" id="email" name="email" placeholder="Indirizzo email" required>    
                     </div>
                     <div class="input-box">
                         <label for="phone">Preferisci essere chiamato?</label>
-                        <input type="text" id="email" name="email" placeholder="Numero di telefono">    
+                        <input type="tel" id="phone" name="phone" placeholder="Numero di telefono">    
                     </div> 
                 </div>
                 <div class="input-box-row">
                     <div class="input-box">
-                        <label for="budget">Quale è il tuo budget?</label>
-                        <input type="text" id="email" name="email" placeholder="Budget..." required>    
+                        <label for="budget">Qual è il tuo budget?</label>
+                        <input type="text" id="budget" name="budget" placeholder="Budget..." required>    
                     </div>
                     <div class="input-box">
                         <label for="timeline">Entro quando ti servirebbe il sito?</label>
-                        <input type="text" id="email" name="email" placeholder="Entro quando...">    
+                        <input type="text" id="timeline" name="timeline" placeholder="Entro quando...">    
                     </div> 
                 </div>
                 <div class="input-box-row centpercent">
                     <div class="input-box">
-                        <label for="budget">Dicci del tuo progetto</label>
-                        <input class="tellus" type="text" id="email" name="email" placeholder="Facci sapere di cosa hai bisogno..." required>    
+                        <label for="project-description">Dicci del tuo progetto</label>
+                        <textarea class="tellus" id="project-description" name="project-description" placeholder="Facci sapere di cosa hai bisogno..." required></textarea>   
                     </div>
                 </div>
                 <button type="submit" class="submit-btn">Invia</button>
             </div>
+        </form>
       </div>
     </div>
 
-
-
-
     <header>
-
         <div class="header__container">
             <div class="header-promo">
                 <div class="promo-content">
@@ -73,34 +68,30 @@
                     <div class="promo-text">Prenota una consulenza gratuita ora!</div>
                     <div class="promo-text">Prenota una consulenza gratuita ora!</div>
                     <div class="promo-text">Prenota una consulenza gratuita ora!</div>
-                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
-                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
-                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
-                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
                 </div>
             </div>
-            <div class="header-menu">
-
-                <a href="index.html">
-                    <img src="../assets/logo-bianco.png" alt="">
+            <div class="header-menu-container">
+                <a href="index.html" class="header-logo">
+                    <img src="../assets/logo-bianco.png" alt="Logo Agenzia">
                 </a>
-
-                <nav>
+                <nav class="header-menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="chisiamo.html">Chi Siamo</a></li>
                         <li class="select"><a href="portfolio.html">Portfolio</a></li>
                     </ul>
                 </nav>
-
                 <div class="header-buttons">
-                    <a href="index.html" class="header-button header-button--primary">Prenota</a>
+                    <a href="#" class="header-button header-button--primary">Prenota</a>
                     <a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="header-button header-button--secondary">Contattaci</a>
                 </div>
+                <button class="menu-toggle" aria-label="Apri menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            
         </div>
-
     </header>
     <main>
 
@@ -150,7 +141,6 @@
 
     </main>
     <footer id="footer">
-
         <div class="footer__container">
             <div class="footer-text">
                 <h2>Creiamo qualcosa</h2>
@@ -160,23 +150,28 @@
                 <ul>
                     <li><a><i class="fas fa-globe"></i> We Work With Passion</a></li>
                     <li><a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="a-hover">Contattaci <i class="fas fa-arrow-right"></i></a></li>
-                    <li><a href="index.html" class="a-hover">Prenota una consulenza gratuita</a></li>
+                    <li><a href="#" class="a-hover">Prenota una consulenza gratuita</a></li>
                 </ul>
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-left">
-                    <div class="logo-grigio">
-                        <img src="../assets/logo-bianco.png" alt="">
-                    </div>
-                    <span>
-                        <p class="footer-privacy">© 2025 <a href="privacy.html">privacy</a></p>
-                    </span>
-
+                    <div class="logo-grigio"><img src="../assets/logo-bianco.png" alt="Logo grigio"></div>
+                    <span><p class="footer-privacy">© 2025 <a href="privacy.html">privacy</a></p></span>
                 </div>
-                
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.header-menu');
+            menuToggle.addEventListener('click', function () {
+                nav.classList.toggle('nav-active');
+                this.classList.toggle('active');
+            });
+        });
+    </script>
     <script src="../promo.js"></script>
     <script src="../switch-parola-ani.js"></script>
     <script src="../modal.js"></script>
