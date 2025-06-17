@@ -1,4 +1,3 @@
-
 /*==============GENERAL STYLES==============*/
 *{margin: 0;padding: 0;box-sizing: border-box;}
 html, body { height: 100%; }
@@ -15,6 +14,7 @@ main { flex: 1; }
 ul { list-style: none; }
 a { text-decoration: none; }
 
+.a-hover{ text-decoration: underline; cursor: pointer;}
 /*==============COLOR PALETTE==============*/
 :root{
     --theme-primary: #90f188;
@@ -167,14 +167,123 @@ section h2 {
 .divisore h3 { font-family: "Instrument Sans", Helvetica, sans-serif; text-transform: uppercase; }
 
 /* GRIGLIA VIDEO RESPONSIVE */
-.video-container {
+/* --- Stile della Sezione Lavori Recenti --- */
+.recent-works {
+    width: 100%;
+    padding: 4rem 2rem; /* Aggiungi un po' di spazio attorno alla sezione */
+}
+
+/* --- Intestazione della Sezione (es. "Lavori Recenti" e "Vedi Tutti") --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 2.5rem;
+    color: #222;
+    margin: 0;
+}
+
+.button-classic {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #222;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-classic:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* --- Griglia dei Lavori --- */
+.works-grid {
     width: 100%;
     display: grid;
-    /* Colonne automatiche con larghezza minima di 350px */
+    /* Colonne automatiche con larghezza minima di 350px, come avevi già fatto */
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
-.video-container video { width: 100%; border-radius: 1.5rem; }
+
+/* --- Elemento Singolo del Portfolio --- */
+.work-item {
+    position: relative; /* Necessario per posizionare l'overlay */
+    display: block;
+    border-radius: 1.5rem;
+    overflow: hidden; /* Maschera ciò che esce dai bordi arrotondati */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.work-item:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.work-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assicura che il video copra tutto lo spazio */
+    display: block; /* Rimuove spazi extra sotto il video */
+    transition: transform 0.4s ease-out; /* Transizione per lo zoom */
+}
+
+/* --- Overlay con il testo --- */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+    display: flex;
+    align-items: flex-end; /* Allinea il contenuto in basso */
+    padding: 1.5rem;
+    
+    /* Stato iniziale: invisibile */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay-content {
+    color: #fff;
+    /* Animazione per il testo */
+    transform: translateY(15px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay-content h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.5rem;
+}
+
+.overlay-content p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+
+/* --- Effetti al passaggio del mouse --- */
+.work-item:hover .video-overlay {
+    opacity: 1; /* Mostra l'overlay */
+}
+
+.work-item:hover .overlay-content {
+    transform: translateY(0); /* Fa salire il testo */
+}
+
+.work-item:hover video {
+    transform: scale(1.05); /* Leggero zoom sul video */
+}
 
 /* SEZIONE SERVIZI RESPONSIVE */
 .col-100 {
@@ -240,15 +349,52 @@ section h2 {
 }
 
 /*================FOOTER==============*/
-footer{ width: 100%; padding: 96px clamp(1rem, 5vw, 5rem) 0 clamp(1rem, 5vw, 5rem); }
-.footer__container { width: 100%; }
-.footer-text h2 { font-family: "Instrument-Serif", Times, serif; font-size: clamp(2.5rem, 7vw, 4.3rem); transform: scaleY(1.4); }
-.footer-nav { border-bottom: 1px solid var(--theme-primary); padding: 20px 0; }
-.footer-nav ul { display: flex; flex-direction: column; gap: 10px; }
-.footer-nav ul li a { font-size: 1.2rem; font-weight: 600; color: var(--theme-secondary); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 20px 0; }
-.footer-bottom-left { display: flex; align-items: center; gap: 1rem; }
-.logo-grigio img { width: 100px; }
+footer {
+    width: 100%;
+    padding: 96px clamp(1rem, 5vw, 5rem) 48px clamp(1rem, 5vw, 5rem);
+}
+.footer__container {
+    width: 100%;
+}
+.footer-text {
+    margin-bottom: 3rem;
+}
+.footer-text h2 {
+    font-family: "Instrument-Serif", Times, serif;
+    font-size: clamp(2.5rem, 7vw, 4.3rem);
+    transform: scaleY(1.4);
+}
+.footer-nav {
+    border-bottom: 1px solid var(--theme-primary);
+    padding: 2.5rem 0;
+}
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.footer-nav ul li a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--theme-secondary);
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0 0 0;
+    gap: 1rem;
+}
+.footer-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo-grigio img {
+    width: 100px;
+}
+
 
 /*==============ANIMATION==============*/
 .switch-word { display: inline-block; opacity: 0; transform: translateY(-40px); transition: opacity 0.5s, transform 0.5s; }
@@ -259,49 +405,13 @@ footer{ width: 100%; padding: 96px clamp(1rem, 5vw, 5rem) 0 clamp(1rem, 5vw, 5re
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.6); /* Valore diretto */
     display: flex;
-    align-items: flex-end;   /* <--- cambia qui */
+    align-items: flex-end;
     justify-content: center;
     z-index: 9999;
-    transition: opacity 0.3s;
-    overflow: hidden;
-    
-}
-
-.modal-content {
-    background: #fff;
-    border-radius: 18px 18px 0 0; /* arrotonda solo sopra */
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    position: relative;
-    width: 90%;
-    max-width: 90%;
-    height: 60vh;         /* o quanto vuoi */
-    max-height: 60vh;
-    min-width: 320px;
-    text-align: center;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 6rem 8rem 3rem 8rem;;
-    margin: 0 auto;
-
-}
-
-.modal-close {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #222;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-.modal-close:hover {
-    color: var(--light-purle-text);
+    opacity: 1;
+    transition: opacity 0.4s ease;
 }
 
 .modal-overlay.hidden {
@@ -309,150 +419,201 @@ footer{ width: 100%; padding: 96px clamp(1rem, 5vw, 5rem) 0 clamp(1rem, 5vw, 5re
     pointer-events: none;
 }
 
-.a-hover {
-    cursor: pointer;
+.modal-content {
+    background: #fff; /* Valore diretto */
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px; /* Larghezza massima per desktop */
+    max-height: 85vh;
+    padding: 3rem 4rem;
+    position: relative;
+    overflow-y: auto;
+    text-align: left;
+    
+    /* Animazione in entrata */
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+.modal-overlay:not(.hidden) .modal-content {
+    transform: translateY(0);
+}
+
+/* Nascondi scrollbar */
+.modal-content {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE e Edge */
+}
+.modal-content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Impedisce lo scroll della pagina dietro */
 body.modal-open {
     overflow: hidden;
-    padding-right: 17px; /* larghezza tipica della scrollbar */
+}
+
+
+/* --- Elementi Interni: Titoli e Bottone Chiusura --- */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: #555; /* Valore diretto */
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-close:hover {
+    background-color: #e0e0e0;
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    margin-bottom: 2.5rem;
+    /* Animazione per gli elementi figli */
+    animation: fadeIn 0.5s ease-out forwards;
 }
 
 .modal-content h2 {
-    font-family: "Instrument-Serif", Times, serif;
-    font-size: 6rem;
-    color: var(--light-purle-text);
-    margin-bottom: 2rem;
-    text-align: left;
-    letter-spacing: 0.01rem;
-    transform: scaleY(1.4);
+    font-family: "Instrument-Serif", "Times New Roman", serif;
+    font-size: 3.5rem;
+    color: #222; /* Valore diretto */
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .modal-content p {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--black-text);
-    margin-bottom: 1rem;
-    text-align: left;
-    letter-spacing: 0.01rem;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555; /* Valore diretto */
+    margin: 0;
 }
 
-.modal-content {
-    /* ...altre proprietà... */
-    scrollbar-width: none;      /* Firefox */
-    -ms-overflow-style: none;   /* IE e Edge */
-}
 
-.modal-content::-webkit-scrollbar {
-    display: none;              /* Chrome, Safari, Opera */
-}
-/*Modal form*/
-
-
-
-.modal-content form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 1rem;
-    
-}
-
-.form-group-info{
-    width: 100%;
+/* --- Stile Form e Input --- */
+.form-group-info {
     display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
-.input-box-row{
+/* Animazione in entrata per i figli del form */
+.form-group-info > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFadeIn 0.5s ease-out forwards;
+}
+
+/* Ritardo animazione per effetto a cascata */
+.input-box-row:nth-child(1) { animation-delay: 0.1s; }
+.input-box-row:nth-child(2) { animation-delay: 0.2s; }
+.input-box-row:nth-child(3) { animation-delay: 0.3s; }
+.input-box-row:nth-child(4) { animation-delay: 0.4s; }
+.submit-btn { animation-delay: 0.5s; }
+
+
+.input-box-row {
     display: grid;
-    grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
 }
-
-.input-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-    position: relative;
-    width: 100%;
-}
-
-.input-box label{
-    display: block;
-    left: 0;
-    font-size: 16px;
-    color: var(--theme-secondary);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.input-box input {
-    width: 100%;
-    padding: 0.6rem 0;
-    border: none;
-    border-radius: 0;
-    background-color: transparent;
-    color: var(--theme-secondary);
-    font-size: 0.93rem;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-.input-box input{
-    border-bottom: 1px solid #bbb;
-}
-.input-box input:focus {
-    border-bottom: 2px solid var(--light-purle-text);
-}
-
 .input-box-row.centpercent {
     grid-template-columns: 1fr;
 }
 
-.input-box input.tellus {
+.input-box {
+    position: relative;
+}
+
+/* Stile input e textarea con etichetta flottante */
+.input-box input,
+.input-box textarea {
     width: 100%;
-    height: 80px;
-    border-bottom: none;
-    border: 1px solid #bbb;
-    border-radius: 1rem;
-    padding: 0.6rem 1.2rem;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Valore diretto */
     background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    color: #222; /* Valore diretto */
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
 }
 
-.tellus:focus{
-    border-color: 2px solid var(--light-purle-text);
+.input-box textarea {
+    min-height: 80px;
 }
 
+.input-box label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    color: #555; /* Valore diretto */
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+}
+
+/* Movimento dell'etichetta */
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label,
+.input-box textarea:focus + label,
+.input-box textarea:not(:placeholder-shown) + label {
+    top: -14px;
+    left: 0;
+    font-size: 0.8rem;
+    color: #6a5acd; /* Valore diretto */
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-bottom-color: #6a5acd; /* Valore diretto */
+}
+
+/* --- Pulsante di Invio --- */
 .submit-btn {
     width: 100%;
-    background: var(--black-text);
-    color: #fff;
+    background: #222; /* Valore diretto */
+    color: #fff; /* Valore diretto */
     border: none;
-    border-radius: 1.5rem;
+    border-radius: 8px;
     padding: 1rem 0;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
     margin-top: 1.5rem;
     letter-spacing: 0.03em;
 }
 
 .submit-btn:hover {
-    background-color: var(--light-purle-text);
-    color: var(--black-text);
+    background-color: #6a5acd; /* Valore diretto */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Keyframes per le animazioni --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /*============PRIVACY PAGE=============*/
@@ -512,6 +673,13 @@ body.modal-open {
     font-weight: 600;
 }
 
+.footer-privacy{
+    color: var(--black-text);
+}
+
+.footer-privacy a{
+    color: var(--black-text);
+}
 /* Responsive per tablet */
 .menu-toggle { display: none; background: none; border: none; cursor: pointer; z-index: 1001; }
 .menu-toggle span { display: block; width: 25px; height: 3px; background-color: var(--theme-secondary); margin: 5px 0; transition: all 0.3s ease-in-out; }
@@ -551,5 +719,31 @@ body.modal-open {
 
     .wrapper_text, .wrapper_video {
         width: 100%; /* Occupa tutta la larghezza */
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        height: 90vh; /* Più alto su mobile */
+        max-height: 90vh;
+        border-radius: 20px 20px 0 0;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .modal-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .modal-content p {
+        font-size: 1rem;
+    }
+
+    .input-box-row {
+        grid-template-columns: 1fr; /* Input impilati verticalmente */
+        gap: 2rem;
+    }
+
+    .submit-btn {
+        padding: 1rem;
     }
 }

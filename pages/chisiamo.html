@@ -6,59 +6,62 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../portfolio-style.css">
     <link rel="stylesheet" href="../chisiamo-style.css">
     <title>Agenzia | Creiamo siti web che fanno la differenza</title>
 </head>
 <body>
 
     <div id="custom-modal" class="modal-overlay hidden">
-      <div class="modal-content">
-        <button class="modal-close" aria-label="Chiudi">&times;</button>
-        <h2>let's get started...</h2>
-        <p>Compila il modulo per contattarci.</p>
-        <form action="">
-            <div class="form-group-info">
-                <div class="input-box-row">
-                    <div class="input-box">
-                        <label for="name">Come ti chiami?</label>
-                        <input type="text" id="name" name="name" placeholder="Nome e Cognome qui" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="activity-name">Come si chiama la tua attività?</label>
-                        <input type="text" id="activity-name" name="activity-name" placeholder="Pizzeria del sole S.r.l" required>
-                    </div>
-                </div>
-                <div class="input-box-row">
-                    <div class="input-box">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Indirizzo email" required>    
-                    </div>
-                    <div class="input-box">
-                        <label for="phone">Preferisci essere chiamato?</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Numero di telefono">    
-                    </div> 
-                </div>
-                <div class="input-box-row">
-                    <div class="input-box">
-                        <label for="budget">Qual è il tuo budget?</label>
-                        <input type="text" id="budget" name="budget" placeholder="Budget..." required>    
-                    </div>
-                    <div class="input-box">
-                        <label for="timeline">Entro quando ti servirebbe il sito?</label>
-                        <input type="text" id="timeline" name="timeline" placeholder="Entro quando...">    
-                    </div> 
-                </div>
-                <div class="input-box-row centpercent">
-                    <div class="input-box">
-                        <label for="project-description">Dicci del tuo progetto</label>
-                        <textarea class="tellus" id="project-description" name="project-description" placeholder="Facci sapere di cosa hai bisogno..." required></textarea>   
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn">Invia</button>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Chiudi">&times;</button>
+
+            <div class="modal-header">
+                <h2>Parliamo del tuo progetto</h2>
+                <p>Compila il modulo qui sotto per iniziare. Ti risponderemo al più presto.</p>
             </div>
-        </form>
-      </div>
+
+            <form action="">
+                <div class="form-group-info">
+                    <div class="input-box-row">
+                        <div class="input-box">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Nome e Cognome</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="activity-name" name="activity-name" placeholder=" " required>
+                            <label for="activity-name">Nome della tua attività</label>
+                        </div>
+                    </div>
+                    <div class="input-box-row">
+                        <div class="input-box">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Il tuo indirizzo email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Numero di telefono (opzionale)</label>
+                        </div>
+                    </div>
+                    <div class="input-box-row">
+                        <div class="input-box">
+                            <input type="text" id="budget" name="budget" placeholder=" " required>
+                            <label for="budget">Qual è il tuo budget?</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="timeline" name="timeline" placeholder=" ">
+                            <label for="timeline">Entro quando?</label>
+                        </div>
+                    </div>
+                    <div class="input-box-row centpercent">
+                        <div class="input-box">
+                            <textarea id="project-description" name="project-description" placeholder=" " required></textarea>
+                            <label for="project-description">Parlaci del tuo progetto</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Invia la richiesta</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <header>
