@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollTrigger: {
             trigger: "#servizi .wrapper_text ul", // L'elemento che attiva l'animazione
             start: "top 80%", // Inizia quando l'80% superiore del trigger entra nel viewport
-            end: "bottom 60%", // Aumenta lo spazio di scroll necessario per completare l'animazione
+            end: "bottom 80%", // Aumenta lo spazio di scroll necessario per completare l'animazione
             
             // SCRUB: La chiave per la sincronizzazione con lo scroll.
             // Un valore numerico (es. 1.5) crea un effetto "morbido" di inseguimento,
