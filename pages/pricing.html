@@ -6,8 +6,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../chisiamo-style.css">
-    <title>Agenzia | Creiamo siti web che fanno la differenza</title>
+    <link rel="stylesheet" href="../pricing-style.css">
+    <title>Pricing | la Fabbrica dei Siti</title>
 </head>
 <body>
 
@@ -72,21 +72,25 @@
                     <div class="promo-text">Prenota una consulenza gratuita ora!</div>
                     <div class="promo-text">Prenota una consulenza gratuita ora!</div>
                     <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
+                    <div class="promo-text">Prenota una consulenza gratuita ora!</div>
                 </div>
             </div>
             <div class="header-menu-container">
                 <a href="index.html" class="header-logo">
-                    <img src="../assets/logo-bianco.png" alt="Logo Agenzia">
+                    <img src="../assets/logo.png" alt="Logo Agenzia">
                 </a>
                 <nav class="header-menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li class="select"><a href="chisiamo.html">Chi Siamo</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="portfolio.html">Lavori Recenti</a></li>
+                        <li class="select"><a href="pricing.html">Pacchetto Web Pro</a></li>
                     </ul>
                 </nav>
                 <div class="header-buttons">
-                    <a href="#" class="header-button header-button--primary">Prenota</a>
                     <a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="header-button header-button--secondary">Contattaci</a>
                 </div>
                 <button class="menu-toggle" aria-label="Apri menu">
@@ -97,57 +101,67 @@
             </div>
         </div>
     </header>
+
     <main>
-        <section id="hero-chisiamo" class="hero">
-            <div class="container1">
-                <div class="row">
-                    <div class="col-100">
-                        <div class="wrapper_text1">
-                            <h1 class="chisiamo-title">Cucire il <span class="highlight">digitale</span></h1>
-                            <h1 class="chisiamo-title">su misura per te.</h1>
+        <div class="hero">
+            <h1 class="hero-title">Il nostro Pacchetto Web <span class="highlight">più richiesto</span></h1>
+            <div class="spazio"></div>
+            <video id="hero-video" class="hero-video" src="../assets/homevideoheader.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <section class="scroll-section">
+            <h2 class="reveal">Costruiamo esperienze digitali su misura che parlano ai tuoi clienti, generano valore e fanno crescere il tuo brand.</h2>
+            <a href="../pages/portfolio.html" class="button-classic">Scopri i nostri lavori <i class="fas fa-arrow-right"></i></a>
+        </section>
+        <section class="recent-works">
+            <div class="divisore">
+                <h3>servizi</h3>
+                <a href="portfolio.html" class="button-classic">Vedi Tutti</a>
+            </div>
+
+            <div class="works-grid">
+                <a href="#" class="work-item">
+                    <video src="../assets/home-video1.mp4" autoplay muted loop playsinline></video>
+                    <div class="video-overlay">
+                        <div class="overlay-content">
+                            <h4>VisualVerse Studio</h4>
+                            <p>Sviluppo Web & Design</p>
                         </div>
                     </div>
+                </a>
+
+                <a href="#" class="work-item">
+                    <video src="../assets/home-video2.mp4" autoplay muted loop playsinline></video>
+                    <div class="video-overlay">
+                        <div class="overlay-content">
+                            <h4>Mediadiame</h4>
+                            <p>E-commerce & Branding</p>
+                        </div>
+                    </div>
+                </a>
+                
+                </div>
+        </section>
+        <section id="servizi">
+            <div class="divisore">
+                <h3>il nostro servizio</h3>
+            </div>
+            <div class="col-100">
+                <div class="wrapper_text">
+                    <h3>Strategia. Design. Sviluppo.</h3>
+                    <ul>
+                        <li>1. Web Design & UI/UX<ul><li>Design che guida l’utente dove vuoi tu.</li></ul></li>
+                        <li>2. Sviluppo Web<ul><li>Siti ultra-performanti, responsive e facili da gestire.</li></ul></li>
+                        <li>3. Brand Identity<ul><li>Dal logo al tono di voce: ti aiutiamo a farti riconoscere.</li></ul></li>
+                        <li>4. SEO & Marketing Digitale<ul><li>Siti per chi cerca conversioni.</li></ul></li>
+                    </ul>
+                </div>
+                <div class="wrapper_video">
+                    <video class="hero-video" src="../assets/home-video3.mp4" autoplay muted loop playsinline></video>
                 </div>
             </div>
         </section>
-
-        <section id="il-nostro-approccio">
-            <div class="container">
-                <div class="approccio-row">
-                    <div class="col-50 approccio-img">
-                        <img src="https://placehold.co/800x600/0c1806/1a2f15?text=Strategia" alt="Analisi e Strategia Digitale">
-                    </div>
-                    <div class="col-50 approccio-text">
-                        <h3>Ascolto e Strategia</h3>
-                        <p>Partiamo dalle tue esigenze per definire obiettivi chiari e misurabili. La strategia è la bussola che guida ogni nostra scelta creativa e tecnica.</p>
-                    </div>
-                </div>
-
-                <div class="approccio-row">
-                    <div class="col-50 approccio-text">
-                        <h3>Design Funzionale</h3>
-                        <p>Un design non è solo estetica, ma funzionalità. Creiamo interfacce intuitive e accessibili che guidano l'utente e convertono i visitatori in clienti.</p>
-                    </div>
-                    <div class="col-50 approccio-img">
-                        <img src="https://placehold.co/800x600/0c1806/1a2f15?text=Design" alt="Design UI/UX Funzionale">
-                    </div>
-                </div>
-
-                <div class="approccio-row">
-                    <div class="col-50 approccio-img">
-                        <img src="https://placehold.co/800x600/0c1806/1a2f15?text=Sviluppo" alt="Sviluppo Tecnologico Affidabile">
-                    </div>
-                    <div class="col-50 approccio-text">
-                        <h3>Tecnologia Affidabile</h3>
-                        <p>Scegliamo gli strumenti più moderni e robusti per garantire siti veloci, sicuri e scalabili, pronti a crescere insieme al tuo business.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
     </main>
+
     <footer id="footer">
         <div class="footer__container">
             <div class="footer-text">
@@ -158,12 +172,12 @@
                 <ul>
                     <li><a><i class="fas fa-globe"></i> We Work With Passion</a></li>
                     <li><a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="a-hover">Contattaci <i class="fas fa-arrow-right"></i></a></li>
-                    <li><a href="#" class="a-hover">Prenota una consulenza gratuita</a></li>
+                    <li><a>Prenota una consulenza gratuita</a></li>
                 </ul>
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-left">
-                    <div class="logo-grigio"><img src="../assets/logo-bianco.png" alt="Logo grigio"></div>
+                    <div class="logo-grigio"><img src="../assets/logo-grigio.png" alt="Logo grigio"></div>
                     <span><p class="footer-privacy">© 2025 <a href="privacy.html">privacy</a></p></span>
                 </div>
             </div>
@@ -189,6 +203,6 @@
     <script src="../modal-anim.js"></script>
     <script src="../h1-anim.js"></script>
     <script src="../gen-anim.js"></script>
-    <script src="../chisiamo-anim.js"></script>
+    <script src="../servizi-anim.js"></script>
 </body>
 </html>

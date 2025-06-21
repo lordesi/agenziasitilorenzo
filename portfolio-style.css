@@ -19,16 +19,11 @@
 
 }
 
-body {
-    background-color: var(--theme-quaternary);
-}
 
-.hero h1 {
-    color: #DDD8E8;
-}
+
 
 .header-promo{
-    background-color: #DDD8E8;;
+    background-color: var(--blue-text);
 }
 
 .header-menu ul li.select > a{
@@ -36,29 +31,16 @@ body {
 }
 
 
-.footer-text h2{
-    color: #DDD8E8;
-}
 
 
-.footer-nav ul li a{
 
-    color: #DDD8E8;
-    
-}
 
 .footer-nav{
-    border-bottom: 1px solid  #DDD8E8;
+    border-bottom: 1px solid  var(--black-text);
 }
 
 
-.footer-privacy{
-    color: #DDD8E8;
-}
 
-.footer-privacy a{
-    color:  #DDD8E8;
-}
 
 .grid-section{
     margin-bottom: 5rem;
@@ -112,6 +94,111 @@ body {
     gap: 1rem;
 }
 
-.menu-toggle span { display: block; width: 25px; height: 3px; background-color: var(--white-text); margin: 5px 0; transition: all 0.3s ease-in-out; }
-.menu-toggle.active span:nth-child(1) { background-color: var(--theme-secondary);  }
-.menu-toggle.active span:nth-child(3) { background-color: var(--theme-secondary); }
+.carousel {
+    position: relative; /* o più, se serve spazio per il trigger */
+    overflow: hidden; /* Aumenta la larghezza massima per immagini più grandi */
+    margin: 0 auto;
+
+}
+
+.carousel-container {
+    display: flex; flex-direction: row; width:max-content; height:auto; gap: 10px; z-index: 0; scroll-behavior: smooth; /* Spaziatura tra le immagini */
+}
+.carousel-container::-webkit-scrollbar{display: none;}
+.carousel-item { /* oppure 300px se vuoi fisse */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    border-radius: 2rem;
+    min-height: 400px;
+    max-height: 500px; ; /* Bordo arrotondato */ /* Imposta un'altezza massima per immagini più grandi */
+    object-fit: cover; /* Assicura che le immagini mantengano proporzioni */
+}
+
+
+
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Assicura che il testo sia sopra l'immagine */
+    max-width: 800px; /* Limita la larghezza del testo */
+}
+
+
+
+.cta-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.cta-text p{
+    color: var(--black-text);
+}
+
+.info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.info-img {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+  
+.info-img img {
+    position: absolute;
+    width: 90%;
+    height: auto;
+    border-radius: 2rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+  
+.info-img img.active {
+    opacity: 1;
+}
+  
+.info-texts {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+  
+.info-text {
+    width: 100%;
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+
+}
+
+.info-texts::-webkit-scrollbar{display: none;}
+
+@media (max-width: 992px) {
+
+
+    .carousel-item img {
+        width: 100%;
+        display: block;
+        border-radius: 2rem;
+        min-height: 200px;
+        max-height: 300px; ; /* Bordo arrotondato */ /* Imposta un'altezza massima per immagini più grandi */
+        object-fit: cover; /* Assicura che le immagini mantengano proporzioni */
+    }
+}
