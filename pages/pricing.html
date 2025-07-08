@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../pricing-style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Pricing | la Fabbrica dei Siti</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
 
             <div class="modal-header">
                 <h2>Parliamo del tuo progetto</h2>
-                <p>Compila il modulo qui sotto per iniziare. Ti risponderemo al più presto.</p>
+                <p>Compila il modulo per <span class="highlight font-bold">scoprire il prezzo</span>.</p>
             </div>
 
             <form action="">
@@ -103,75 +104,86 @@
     </header>
 
     <main>
-        <div class="hero">
-            <h1 class="hero-title">Il nostro Pacchetto <br>Web <span class="highlight">più richiesto</span></h1>
-            <div class="spazio"></div>
-        </div>
 
-        <section class="pro-hero">
-            <div class="pro-hero-content">
-                <h1>Pacchetto <span class="highlight">Web Pro</span></h1>
-                <p>Il sito che trasforma la tua presenza online in clienti reali.<br> Tutto incluso, senza sorprese.</p>
-                <a href="#cta" class="button-classic">Richiedi una consulenza gratuita</a>
+        <section class="relative bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-20 md:py-32 overflow-hidden rounded-b-3xl shadow-lg">
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class=" md:text-6xl font-extrabold leading-tight mb-6 fade-in-up">
+                    Il nostro Pacchetto <br>Web <span class="highlight text-indigo-200">più richiesto</span>
+                </h1>
+                <p class="text-xl md:text-2xl opacity-90 mb-10 max-w-2xl mx-auto fade-in-up delay-200">
+                    Trasforma la tua presenza online in un motore di crescita per il tuo business.
+                </p>
+                <a href="#feature-section" class="button-classic fade-in-up delay-400">Scopri di più</a>
             </div>
-            <div class="pro-hero-img">
-                <img src="../assets/pro-hero.webp" alt="Web Pro Hero">
-            </div>
-        </section>
-
-        <section class="pro-features">
-            <h2>Cosa include il Pacchetto Web Pro?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Sito su misura</h3>
-                    <p>Design personalizzato, mobile-first, ottimizzato per la conversione.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-rocket"></i>
-                    <h3>SEO & Performance</h3>
-                    <p>Ottimizzazione per Google, velocità e sicurezza incluse.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-edit"></i>
-                    <h3>Gestione autonoma</h3>
-                    <p>Potrai aggiornare testi e immagini in autonomia con un pannello semplice.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-headset"></i>
-                    <h3>Assistenza dedicata</h3>
-                    <p>Supporto rapido via email e telefono per 12 mesi.</p>
-                </div>
+            <!-- Abstract shapes for background effect -->
+            <div class="absolute inset-0 z-0 opacity-20">
+                <svg class="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="#ffffff" fill-opacity="0.1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,128C672,128,768,192,864,208C960,224,1056,192,1152,170.7C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
             </div>
         </section>
 
-        <section class="pro-cta" id="cta">
-            <div class="pro-cta-content">
-                <h2>Pronto a far crescere il tuo business?</h2>
-                <p>Richiedi una consulenza gratuita e scopri come il Pacchetto Web Pro può aiutarti a raggiungere i tuoi obiettivi.</p>
-                <a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="button-classic">Contattaci ora</a>
+        <!-- Features Section -->
+        <section id="feature-section" class="py-0 md:py-10 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class=" md:py-5 text-3xl md:text-4xl font-bold mb-3 fade-in-up">Cosa include il Pacchetto Web Pro?</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 zoom-in">
+                        <i class="fas fa-laptop-code text-5xl text-indigo-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-3">Sito su misura</h3>
+                        <p class="text-gray-600">Sito web personalizzato fino a <span class="highlight font-bold">10 pagine</span></p>
+                    </div>
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 zoom-in delay-100">
+                        <i class="fas fa-rocket text-5xl text-indigo-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-3">SEO & Performance</h3>
+                        <p class="text-gray-600">Ottimizzazione per <span class="highlight font-bold">Google, velocità e sicurezza incluse</span>.</p>
+                    </div>
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 zoom-in delay-200">
+                        <i class="fas fa-edit text-5xl text-indigo-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-3">Dominio + Hosting per <span class="highlight font-bold">1 anno</span></h3>
+                        <p class="text-gray-600">Registrazione del dominio e attivazione di un <span class="highlight font-bold">hosting performante</span>.</p>
+                    </div>
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 zoom-in delay-300">
+                        <i class="fas fa-headset text-5xl text-indigo-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-3">Assistenza dedicata</h3>
+                        <p class="text-gray-600">Supporto rapido via email e telefono per <span class="highlight font-bold">3 mesi</span>.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="pro-faq">
-            <h2>Domande frequenti</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h4>Quanto tempo serve per realizzare il sito?</h4>
-                    <p>In media 2-4 settimane, a seconda della complessità e della rapidità nel fornire i materiali.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Posso aggiungere funzionalità extra?</h4>
-                    <p>Certo! Possiamo personalizzare il pacchetto in base alle tue esigenze.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Il sito sarà mio?</h4>
-                    <p>Sì, il sito è di tua proprietà e potrai gestirlo come preferisci.</p>
+        <!-- CTA Section -->
+        <section id="cta" class="py-16 md:py-24 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center rounded-3xl mx-auto max-w-6xl my-16 shadow-xl">
+            <div class="container mx-auto px-6 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Scopri il prezzo del pacchetto pro</h2>
+                <p class="text-lg md:text-xl opacity-90 mb-10 max-w-3xl mx-auto">
+                    Richiedi una consulenza gratuita e scopri come il Pacchetto Web Pro può aiutarti a raggiungere i tuoi obiettivi.
+                </p>
+                <a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="button-classic cursor-pointer">Scopri il prezzo</a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-inter font-bold mb-12 fade-in-up">Domande frequenti</h2>
+                <div class="faq-list max-w-3xl mx-auto space-y-6">
+                    <div class="faq-item bg-gray-50 p-6 rounded-lg shadow-sm text-left fade-in-up">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Quanto tempo serve per realizzare il sito?</h4>
+                        <p class="text-gray-600">In media 2-4 settimane, a seconda della complessità e della rapidità nel fornire i materiali.</p>
+                    </div>
+                    <div class="faq-item bg-gray-50 p-6 rounded-lg shadow-sm text-left fade-in-up delay-100">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Posso aggiungere funzionalità extra?</h4>
+                        <p class="text-gray-600">Certo! Possiamo personalizzare il pacchetto in base alle tue esigenze.</p>
+                    </div>
+                    <div class="faq-item bg-gray-50 p-6 rounded-lg shadow-sm text-left fade-in-up delay-200">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Il sito sarà mio?</h4>
+                        <p class="text-gray-600">Sì, il sito è di tua proprietà e potrai gestirlo come preferisci.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
     <footer id="footer">
         <div class="footer__container">
             <div class="footer-text">
@@ -214,5 +226,50 @@
     <script src="../h1-anim.js"></script>
     <script src="../gen-anim.js"></script>
     <script src="../servizi-anim.js"></script>
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Modal animation
+        document.getElementById('custom-modal').addEventListener('transitionend', function(e) {
+            if (!this.classList.contains('hidden')) {
+                document.getElementById('modal-content-inner').classList.remove('scale-95', 'opacity-0');
+                document.getElementById('modal-content-inner').classList.add('scale-100', 'opacity-100');
+            } else {
+                document.getElementById('modal-content-inner').classList.remove('scale-100', 'opacity-100');
+                document.getElementById('modal-content-inner').classList.add('scale-95', 'opacity-0');
+            }
+        });
+
+        // Intersection Observer for scroll-reveal animations
+        const animateOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        };
+
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver(animateOnScroll, observerOptions);
+
+        // Elements to animate
+        document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .zoom-in').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>

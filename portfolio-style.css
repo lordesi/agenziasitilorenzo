@@ -114,8 +114,8 @@
     width: 100%;
     display: block;
     border-radius: 2rem;
-    min-height: 400px;
-    max-height: 300px; ; /* Bordo arrotondato */ /* Imposta un'altezza massima per immagini più grandi */
+    min-height: 80vh;
+    max-height: 80vh; ; /* Bordo arrotondato */ /* Imposta un'altezza massima per immagini più grandi */
     object-fit: cover; /* Assicura che le immagini mantengano proporzioni */
 }
 
@@ -230,8 +230,8 @@
         width: 100%;
         display: block;
         border-radius: 2rem;
-        min-height: 200px;
-        max-height: 300px; ; /* Bordo arrotondato */ /* Imposta un'altezza massima per immagini più grandi */
+        min-height: 80vh;
+        max-height: 80vh; ; /* Bordo arrotondato */ /* Imposta un'altezza massima per immagini più grandi */
         object-fit: cover; /* Assicura che le immagini mantengano proporzioni */
     }
 }
