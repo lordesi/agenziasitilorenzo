@@ -16,6 +16,8 @@ a { text-decoration: none; }
 
 .a-hover{ text-decoration: underline; cursor: pointer;}
 /*==============COLOR PALETTE==============*/
+
+
 :root{
     --theme-primary: #90f188;
     --theme-secondary: #0f1d07;

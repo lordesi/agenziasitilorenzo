@@ -115,7 +115,7 @@
     display: block;
     border-radius: 2rem;
     min-height: 400px;
-    max-height: 500px; ; /* Bordo arrotondato */ /* Imposta un'altezza massima per immagini più grandi */
+    max-height: 300px; ; /* Bordo arrotondato */ /* Imposta un'altezza massima per immagini più grandi */
     object-fit: cover; /* Assicura che le immagini mantengano proporzioni */
 }
 
@@ -127,10 +127,14 @@
     justify-content: center;
     align-items: center;
     z-index: 1; /* Assicura che il testo sia sopra l'immagine */
-    max-width: 800px; /* Limita la larghezza del testo */
+    max-width: 800px;
+     /* Limita la larghezza del testo */
 }
 
-
+.cta-text h2{
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
 
 .cta-text p {
     font-size: 1.2rem;
@@ -185,7 +189,36 @@
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
+    
 
+}
+
+.buttons-wrapper{
+    width: 100%;
+    height: auto;
+
+}
+
+.button-classic {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    
+}
+.info-text h2{
+    margin: 10px 0 3rem 0;
+    font-size: 4rem;
+    text-align: left;
+}
+
+.info-text p {
+    font-size: 1.2rem;
+    color: var(--black-text);
+    text-align: left;
+}
+
+.info-text p .highlight {
+    font-style: italic;
+    font-weight: bold;
 }
 
 .info-texts::-webkit-scrollbar{display: none;}

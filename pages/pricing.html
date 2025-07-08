@@ -104,59 +104,69 @@
 
     <main>
         <div class="hero">
-            <h1 class="hero-title">Il nostro Pacchetto Web <span class="highlight">più richiesto</span></h1>
+            <h1 class="hero-title">Il nostro Pacchetto <br>Web <span class="highlight">più richiesto</span></h1>
             <div class="spazio"></div>
-            <video id="hero-video" class="hero-video" src="../assets/homevideoheader.mp4" autoplay muted loop playsinline></video>
         </div>
-        <section class="scroll-section">
-            <h2 class="reveal">Costruiamo esperienze digitali su misura che parlano ai tuoi clienti, generano valore e fanno crescere il tuo brand.</h2>
-            <a href="../pages/portfolio.html" class="button-classic">Scopri i nostri lavori <i class="fas fa-arrow-right"></i></a>
-        </section>
-        <section class="recent-works">
-            <div class="divisore">
-                <h3>servizi</h3>
-                <a href="portfolio.html" class="button-classic">Vedi Tutti</a>
-            </div>
 
-            <div class="works-grid">
-                <a href="#" class="work-item">
-                    <video src="../assets/home-video1.mp4" autoplay muted loop playsinline></video>
-                    <div class="video-overlay">
-                        <div class="overlay-content">
-                            <h4>VisualVerse Studio</h4>
-                            <p>Sviluppo Web & Design</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="work-item">
-                    <video src="../assets/home-video2.mp4" autoplay muted loop playsinline></video>
-                    <div class="video-overlay">
-                        <div class="overlay-content">
-                            <h4>Mediadiame</h4>
-                            <p>E-commerce & Branding</p>
-                        </div>
-                    </div>
-                </a>
-                
-                </div>
-        </section>
-        <section id="servizi">
-            <div class="divisore">
-                <h3>il nostro servizio</h3>
+        <section class="pro-hero">
+            <div class="pro-hero-content">
+                <h1>Pacchetto <span class="highlight">Web Pro</span></h1>
+                <p>Il sito che trasforma la tua presenza online in clienti reali.<br> Tutto incluso, senza sorprese.</p>
+                <a href="#cta" class="button-classic">Richiedi una consulenza gratuita</a>
             </div>
-            <div class="col-100">
-                <div class="wrapper_text">
-                    <h3>Strategia. Design. Sviluppo.</h3>
-                    <ul>
-                        <li>1. Web Design & UI/UX<ul><li>Design che guida l’utente dove vuoi tu.</li></ul></li>
-                        <li>2. Sviluppo Web<ul><li>Siti ultra-performanti, responsive e facili da gestire.</li></ul></li>
-                        <li>3. Brand Identity<ul><li>Dal logo al tono di voce: ti aiutiamo a farti riconoscere.</li></ul></li>
-                        <li>4. SEO & Marketing Digitale<ul><li>Siti per chi cerca conversioni.</li></ul></li>
-                    </ul>
+            <div class="pro-hero-img">
+                <img src="../assets/pro-hero.webp" alt="Web Pro Hero">
+            </div>
+        </section>
+
+        <section class="pro-features">
+            <h2>Cosa include il Pacchetto Web Pro?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Sito su misura</h3>
+                    <p>Design personalizzato, mobile-first, ottimizzato per la conversione.</p>
                 </div>
-                <div class="wrapper_video">
-                    <video class="hero-video" src="../assets/home-video3.mp4" autoplay muted loop playsinline></video>
+                <div class="feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>SEO & Performance</h3>
+                    <p>Ottimizzazione per Google, velocità e sicurezza incluse.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-edit"></i>
+                    <h3>Gestione autonoma</h3>
+                    <p>Potrai aggiornare testi e immagini in autonomia con un pannello semplice.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Assistenza dedicata</h3>
+                    <p>Supporto rapido via email e telefono per 12 mesi.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="pro-cta" id="cta">
+            <div class="pro-cta-content">
+                <h2>Pronto a far crescere il tuo business?</h2>
+                <p>Richiedi una consulenza gratuita e scopri come il Pacchetto Web Pro può aiutarti a raggiungere i tuoi obiettivi.</p>
+                <a onclick="document.getElementById('custom-modal').classList.remove('hidden'); document.body.classList.add('modal-open');" class="button-classic">Contattaci ora</a>
+            </div>
+        </section>
+
+        <section class="pro-faq">
+            <h2>Domande frequenti</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>Quanto tempo serve per realizzare il sito?</h4>
+                    <p>In media 2-4 settimane, a seconda della complessità e della rapidità nel fornire i materiali.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Posso aggiungere funzionalità extra?</h4>
+                    <p>Certo! Possiamo personalizzare il pacchetto in base alle tue esigenze.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Il sito sarà mio?</h4>
+                    <p>Sì, il sito è di tua proprietà e potrai gestirlo come preferisci.</p>
                 </div>
             </div>
         </section>
